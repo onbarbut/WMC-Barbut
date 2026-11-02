@@ -1,0 +1,139 @@
+/* ===== Grundeinstellungen ===== */
+
+/* box-sizing: border-box -> width beinhaltet padding und border */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 1rem = 16px (Browser-Standard) */
+}
+
+body {
+    margin: 0;
+    background-color: #1e1f2b;
+    color: #e8e8f0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5; /* einheitenlos: relativ zur Schriftgröße */
+}
+
+/* ===== Header & Navigation ===== */
+
+header {
+    padding: 1.5rem 2rem;
+}
+
+/* Überschrift mit rgba()-Hintergrund */
+h1 {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(200, 155, 60, 0.35);
+    border-left: 0.4rem solid rgb(200, 155, 60);
+    border-radius: 0.5rem;
+    font-size: 2.5rem;
+}
+
+nav a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.4em 0.9em; /* em: relativ zur Schriftgröße des Links */
+    color: #e8e8f0;
+    text-decoration: none;
+    border: 2px solid rgba(232, 232, 240, 0.4);
+    border-radius: 2rem;
+}
+
+nav a:hover {
+    background-color: rgba(232, 232, 240, 0.15);
+}
+
+/* ===== Inhalt ===== */
+
+.inhalt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 75rem;
+    padding: 0 2rem 2rem;
+}
+
+/* Kartendesign: Box-Model mit margin, border, padding */
+.karte {
+    width: 20rem;
+    padding: 1rem;
+    border: 2px solid rgba(232, 232, 240, 0.25);
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.karte h2 {
+    margin-top: 0;
+    color: rgb(200, 155, 60);
+}
+
+/* Prozent: Bild füllt immer die Breite der Karte */
+.bild {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Formular-Seite: breitere Karte, Textlänge in ch begrenzt */
+.formular {
+    width: 100%;
+    max-width: 60ch;
+}
+
+.formular fieldset {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 2px solid rgba(232, 232, 240, 0.25);
+    border-radius: 0.5rem;
+}
+
+.formular input,
+.formular select,
+.formular textarea,
+.formular button {
+    padding: 0.4rem;
+    font-size: 1rem;
+}
+
+.formular textarea {
+    width: 100%;
+}
+
+/* ===== Box-Model-Vergleich ===== */
+
+.box-demo {
+    width: 26rem;
+}
+
+.demo {
+    width: 20rem;
+    padding: 1rem;
+    border: 2px solid rgb(200, 155, 60);
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.content-box {
+    box-sizing: content-box; /* alte Berechnung: 20rem + padding + border */
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(232, 232, 240, 0.2);
+    font-size: 0.875rem;
+    color: rgba(232, 232, 240, 0.7);
+}

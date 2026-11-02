@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Über mich – Stefan Barbut</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
@@ -11,17 +12,17 @@
         <nav>
             <a href="#steckbrief">Steckbrief</a>
             <a href="#hobby">Hobby</a>
+            <a href="../formular-uebung/index.html">Formular</a>
         </nav>
     </header>
 
-    <main>
-        <article id="steckbrief">
+    <main class="inhalt">
+        <article id="steckbrief" class="karte">
             <h2>Steckbrief</h2>
-            <!-- TODO: Bild hier verlinken (src anpassen) -->
-            <img src="bilder/profilbild.jpg" alt="Porträtfoto von Stefan Barbut" width="200">
+            <img src="bilder/profilbild.avif" alt="Porträtfoto von Stefan Barbut" class="bild">
             <p>Ich heiße Stefan Barbut und gehe in die HTL.</p>
             <p>Mich interessieren besonders Programmieren und Netzwerktechnik.</p>
-            <p>In WMC lerne ich gerade, wie man Webseiten mit HTML aufbaut.</p>
+            <p>In WMC lerne ich gerade, wie man Webseiten mit HTML und CSS aufbaut.</p>
             <ul>
                 <li>Lieblingsfach: WMC</li>
                 <li>Lieblingssprache: Java</li>
@@ -29,12 +30,22 @@
             </ul>
         </article>
 
-        <aside id="hobby">
+        <aside id="hobby" class="karte">
             <h2>Mein Hobby</h2>
-            <!-- TODO: Bild hier verlinken (src anpassen) -->
-            <img src="bilder/hobby.jpg" alt="Bild zu meinem Hobby Gaming" width="200">
-            <p>In meiner Freizeit spiele ich gerne Videospiele, zum Beispiel League of legends.</p>
+            <img src="bilder/hobby.webp" alt="Screenshot aus dem Spiel League of Legends" class="bild">
+            <p>In meiner Freizeit spiele ich gerne Videospiele, zum Beispiel League of Legends.</p>
         </aside>
+
+        <section class="karte box-demo">
+            <h2>Box-Model-Vergleich</h2>
+            <p>Beide Boxen haben <code>width: 20rem; padding: 1rem; border: 2px solid</code>.</p>
+            <div class="demo content-box">content-box: 20rem + 2 × 1rem + 2 × 2px = 22rem + 4px (352px)</div>
+            <div class="demo border-box">border-box: genau 20rem (320px)</div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Stefan Barbut – 3CAIF, WMC</p>
+    </footer>
 </body>
 </html>

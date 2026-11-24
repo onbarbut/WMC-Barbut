@@ -56,16 +56,16 @@
             <fieldset>
                 <legend>Turnier</legend>
 
-                <!-- Radiobuttons -->
-                <p>Erfahrung:</p>
-                <p>
+                <!-- Radiobuttons: gleicher name = eine Gruppe, eigener value = eine Option -->
+                <fieldset>
+                    <legend>Erfahrung</legend>
                     <input type="radio" id="anfaenger" name="erfahrung" value="Anfaenger" required>
                     <label for="anfaenger">Anfänger</label>
                     <input type="radio" id="fortgeschritten" name="erfahrung" value="Fortgeschritten">
                     <label for="fortgeschritten">Fortgeschritten</label>
                     <input type="radio" id="profi" name="erfahrung" value="Profi">
                     <label for="profi">Profi</label>
-                </p>
+                </fieldset>
 
                 <!-- Dropdown -->
                 <p>
@@ -98,15 +98,15 @@
                 </p>
 
                 <!-- Checkboxen -->
-                <p>Ausstattung:</p>
-                <p>
+                <fieldset>
+                    <legend>Ausstattung</legend>
                     <input type="checkbox" id="headset" name="ausstattung" value="Headset">
                     <label for="headset">Eigenes Headset</label>
                     <input type="checkbox" id="maus" name="ausstattung" value="Maus">
                     <label for="maus">Eigene Maus</label>
                     <input type="checkbox" id="tastatur" name="ausstattung" value="Tastatur">
                     <label for="tastatur">Eigene Tastatur</label>
-                </p>
+                </fieldset>
             </fieldset>
 
             <fieldset>

@@ -1,0 +1,58 @@
+/* ===================================================================
+   Beispiel 3 — Prüfungsaufgabe CSS-Selektoren
+   Das HTML bleibt unverändert; alles läuft über Selektoren.
+   =================================================================== */
+
+/* Grundlesbarkeit (nicht Teil der Aufgabe) */
+body {
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+table.preise {
+    border-collapse: collapse; /* nötig, damit der Zeilenrahmen in c) sichtbar ist */
+    margin-top: 1rem;
+}
+
+table.preise th,
+table.preise td {
+    padding: 0.4rem 0.8rem;
+    text-align: left;
+}
+
+/* a) Alle section im article.testbereich, deren data-topic mit "css-adv"
+      BEGINNT (^=): Rahmen 2px, gestrichelt, rot. */
+article.testbereich section[data-topic^="css-adv"] {
+    border: 2px dashed red;
+    padding: 0.5rem 1rem;
+}
+
+/* b) Nur der DRITTE Listeneintrag dieser Sektion, darin nur der DIREKTE
+      Link (>): grün und fett. transition sorgt für den weichen Wechsel. */
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a {
+    color: green;
+    font-weight: bold;
+    transition: color 1s;
+}
+
+/* b) Hover: Farbe wechselt in 1 Sekunde weich auf rot */
+article.testbereich section[data-topic^="css-adv"] li:nth-child(3) > a:hover {
+    color: red;
+}
+
+/* c) Zweite DATENzeile (Hauptgericht) hervorheben.
+      Die Kopfzeile ist Zeile 1 → Hauptgericht ist tr:nth-child(3).
+      (Der Browser legt alle tr automatisch in ein tbody, das ändert an
+      der Zählung nichts.) */
+table.preise tr:nth-child(3) {
+    background: #fff4cc;
+    font-weight: bold;
+}
+
+/* c) Letzte Zeile bekommt einen oberen Rahmen */
+table.preise tr:last-child {
+    border-top: 2px solid #888888;
+}
